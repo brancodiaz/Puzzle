@@ -1,6 +1,6 @@
-import { Piece } from './Piece';
+import { Piece } from '../Piece/Piece';
 import './Board.css'
-import './Piece.css'
+import '../Piece/Piece.css'
 interface IboardProps
 {
     board: number[],

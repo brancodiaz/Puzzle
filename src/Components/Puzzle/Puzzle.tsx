@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Puzzle.css'
-import Board from './Board'
+import Board from '../Board/Board'
 
 export const Puzzle = () => {
     const [board, setBoard] = useState(GetInitialArray());
