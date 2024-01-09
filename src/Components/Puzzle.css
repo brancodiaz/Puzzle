@@ -1,0 +1,15 @@
+body{
+    margin: 0;    
+    align-content: center;
+    background-color: #ddd;
+}
+
+.game {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* margin: 0 auto; */
+}
