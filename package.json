@@ -1,7 +1,8 @@
 {
   "name": "puzzle",
+  "homepage": "https://brancodiaz.github.io/Puzzle/",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -27,6 +28,5 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
-  },
-  "homepage": "https://brancodiaz.github.io/Puzzle"
+  }
 }
