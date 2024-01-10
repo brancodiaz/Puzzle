@@ -4,6 +4,7 @@ import Board from '../Board/Board'
 
 export const Puzzle = () => {
     const [board, setBoard] = useState(GetInitialArray());
+    const [playsCounter, setPlaysCounter] = useState(0);
 
     function GetInitialArray(): number[] {
         // Your logic to generate the array here
@@ -27,6 +28,7 @@ export const Puzzle = () => {
             // console.log(array);
             return array;
         });
+        setPlaysCounter(0);
     }
 
     function movePiece(valueToMove: number) {
@@ -71,6 +73,7 @@ export const Puzzle = () => {
             array[indexZero] = array[currentIndex];
             array[currentIndex] = 0;
             setBoard(array);
+            setPlaysCounter(playsCounter + 1);
             return true;
         }
 
@@ -80,7 +83,9 @@ export const Puzzle = () => {
 
     return (
         <div className='game'>
+            <h1>PUZZLE</h1>
             <Board board={board} shuffleArray={shuffleArray} movePiece={movePiece} />
+            <label>Número de jugadas: {playsCounter}</label>
         </div>);
 }
 
