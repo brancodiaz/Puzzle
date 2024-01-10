@@ -1,7 +1,9 @@
+
 body{
     margin: 0;    
     align-content: center;
     background-color: #ddd;
+    font-family: 'Roboto', sans-serif;
 }
 
 .game {

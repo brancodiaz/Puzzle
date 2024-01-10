@@ -1,11 +1,14 @@
 .enabled {
-    border: 1px solid red;
     border-radius: 4px;
     text-align: center;
     height: auto;
     font-size: xx-large;
     background-image: url('https://sodimac.scene7.com/is/image/SodimacPeru/8829136_01?wid=1500&hei=1500&qlt=70');
+    background-size: 441px;
+    background-repeat: no-repeat;
     position: relative;
+    /* width: 100%;
+    height: 100%; */ 
 }
 
 .disabled {

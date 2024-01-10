@@ -6,7 +6,10 @@ interface IPieceProps {
   }
 
 export const Piece = ({id, order, movePiece} : IPieceProps) => {
+
   return (
-    <div id={id.toString()} className={ order !== 0 ? 'enabled': 'disabled'} onClick={() => movePiece(order)} >{order}</div>
+    <div id={id.toString()} 
+        className={ order !== 0 ? 'enabled': 'disabled'} 
+        onClick={() => movePiece(order)} >{order}</div>
   )
 }
