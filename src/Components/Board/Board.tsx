@@ -1,26 +1,31 @@
 import { Piece } from '../Piece/Piece';
 import './Board.css'
 import '../Piece/Piece.css'
-interface IboardProps
-{
+interface IboardProps {
     board: number[],
-    shuffleArray: any,
-    movePiece: any
+    movePiece: any,
+    disabledOrder: number,
+    startedGame: boolean
 }
 
-export const Board = ( { board, shuffleArray, movePiece } : IboardProps) => {
-    
+export const Board = ({ board, movePiece, disabledOrder, startedGame }: IboardProps) => {
+
+    const getPosition = (index: number): string => {
+        const y: number = Math.floor(index / 3);
+        const x: number = (index) - (Math.floor(index / 3) * 3);
+        const position: string = '-' + (x * 150) + 'px -' + (y * 150) + 'px'
+        // console.log(position);
+        return position;
+    }
     return (
         <>
-            <input type='button' value="Start!" className="start" onClick={shuffleArray} />
-            <div className="container">
-                <Piece id={0} order={board[0]} movePiece={movePiece}/>
-                <div></div>
-                <div></div>
-                { 
-                    board.slice(1).map((piece, index) =>
+            <div className={startedGame ? "container" : "initial"}>
+                {startedGame &&
+                    board.map((piece, index) =>
                     (
-                        <Piece id={index + 1} order={piece} movePiece={movePiece} />
+                        <Piece id={index + 1} order={piece} enabled={piece !== disabledOrder ? true : false} movePiece={movePiece}
+                            position={getPosition(piece)}
+                        />
                     ))}
             </div>
         </>

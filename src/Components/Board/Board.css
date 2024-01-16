@@ -2,16 +2,16 @@
     display: grid;
     border: 1px solid black;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     width: 450px;
-    height: 600px;
+    height: 450px;
     border-radius: 4px;
-    gap: 3px;
-    padding: 3px;
+    gap: 2px;
 }
 
-.start {
-    margin-bottom: 10px;
-    width: 100px;
-    height: 50px;
+.initial {
+    background-image: url('https://sodimac.scene7.com/is/image/SodimacPeru/8829136_01?wid=1500&hei=1500&qlt=70');
+    width: 450px;
+    height: 450px;
+    background-size: 450px;
 }
